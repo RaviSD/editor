@@ -20,7 +20,9 @@ import { CommonUiModule } from './common-ui/common-ui.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CommonUiModule
+    CommonUiModule	//<---- This is shared module where we kept out editor code in component.
+					// There are two component in two different module, We can not share data directly.
+					// Instead of that we hve to share module, so we importing in app.module.
   ],
   providers: [],
   bootstrap: [AppComponent]

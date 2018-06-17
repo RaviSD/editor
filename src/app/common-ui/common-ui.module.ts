@@ -6,9 +6,9 @@ import { RichTextEditorComponent } from './rich-text-editor/rich-text-editor.com
 @NgModule({
   imports: [
     CommonModule,
-    EditorModule
+    EditorModule // <----- Import prime ng editor module here.
   ],
   declarations: [RichTextEditorComponent],
-  exports: [RichTextEditorComponent]
+  exports: [RichTextEditorComponent]// <---- We need to export our component, to use in out side of this module.
 })
 export class CommonUiModule { }
