@@ -1,14 +1,18 @@
 <p-editor [style]="{'height':'100px'}"  id="{{id}}" (onInit)="onEditorInitialize($event)"
  (onTextChange)="onEditorTextChanged($event)" #editorLocalReference>
   <p-header>
-      <span class="ql-format-group">
-          <span title="Bold" class="ql-format-button ql-bold"></span>
-          <span class="ql-format-separator"></span>
-          <span title="Italic" class="ql-format-button ql-italic"></span>
-          <span class="ql-format-separator"></span>
-          <span title="Underline" class="ql-format-button ql-underline"></span>
-          <span class="ql-format-separator"></span>
-          <span title="Strikethrough" class="ql-format-button ql-strike"></span>
-      </span>
-  </p-header>
-</p-editor>#rc-----{{id}}/{{Content}}#
+        <span class="ql-formats">
+            <button class="ql-bold" aria-label="Bold"></button>
+            <button class="ql-italic" aria-label="Italic"></button>
+            <button class="ql-underline" aria-label="Underline"></button>
+			<button class="ql-list" value="ordered"></button>
+			<button class="ql-list" value="bullet"></button>
+			<select title="Text Alignment" class="ql-align" >
+              <option selected>Gauche</option>
+              <option value="center" label="Center"></option>
+              <option value="right" label="Right"></option>
+              <option value="justify" label="Justify"></option>
+            </select>
+        </span>
+    </p-header>
+</p-editor>
