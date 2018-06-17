@@ -1,0 +1,29 @@
+<app-rich-text-editor 
+    [editorContent]="content"
+    [editorId]="firstEditor"
+    (EditorInitialize)="onEditorInitialize($event)"
+    (EditorTextChanged)="onEditorTextChanged_1($event)"
+    (EditorBlur)="onEditorBlur($event)"
+    (charCount)="onCharCount($event)"></app-rich-text-editor>
+
+    <div>{{charCounter}}/1000</div>#{{firstEditor}}#----#{{content}}#
+        <!-- @Input('editorContent') Content: any;
+  @Input('secondaryEditorContent') secondaryContent: any;
+  @Input('editorId') id: string;
+  @Input('editorName') name: string;
+
+  @Output() EditorInitialize = new EventEmitter<any>();
+    @Output() EditorTextChanged = new EventEmitter<any>();
+    @Output() EditorBlur = new EventEmitter<any>();
+    @Output() charCount = new EventEmitter<number>();
+    @Output() secondaryCharCount = new EventEmitter<number>(); -->
+
+            <app-rich-text-editor 
+            [editorContent]="secondaryContent"
+            [editorId]="secondEditor"
+            (EditorInitialize)="onEditorInitialize($event)"
+            (EditorTextChanged)="onEditorTextChanged_1($event)"
+            (EditorBlur)="onEditorBlur($event)"
+            (secondaryCharCount)="onsecondaryCharCount($event)"></app-rich-text-editor>
+        
+            <div>{{secondaryCharCounter}}/1000</div>#{{secondEditor}}#----#{{secondaryContent}}#
